@@ -20,6 +20,9 @@ theme:
 
 nav:
   - Home: index.md
+  - Fasi:
+      - 1 · Ambiente: fasi/01-ambiente.md
+      - 2 · Repo e seed: fasi/02-repo-e-seed.md
 
 markdown_extensions:
   - admonition
