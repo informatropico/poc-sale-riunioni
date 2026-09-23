@@ -17,6 +17,9 @@ un processo**. Il valore sta nel processo e nella sua documentazione, non nel pr
 - **Niente decisioni di progetto dentro le skill.** Le skill descrivono il metodo; le
   decisioni vivono negli artefatti (intent, spec, ADR). Se una skill e un artefatto
   divergono, **vince l'artefatto**.
+- **L'intento approvato è la fonte a monte.** Quando una skill chiede un'idea, un contesto o
+  una destinazione, si legge `intent/` — non si ricostruisce a memoria e non si rinegozia ciò
+  che l'intento ha già deciso.
 - **Dichiara le assunzioni.** Se serve assumere qualcosa per procedere, va detto, non
   nascosto in mezzo al lavoro.
 
@@ -30,7 +33,7 @@ un processo**. Il valore sta nel processo e nella sua documentazione, non nel pr
 
 ### Issue tracker
 
-Ticket su Linear (team `MAT`, progetto "POC - Prenotazione Sale") tramite il server MCP `linear-server`; specifiche come Documents di Linear. Codice e PR su GitHub. Vedi `docs/agents/issue-tracker.md`.
+Ticket su Linear (team `MAT`, progetto "POC - Prenotazione Sale") tramite il server MCP `linear-server`; intento, specifiche e ADR come file committati nel repo (`intent/`, `spec/`, `docs/adr/`). Codice e PR su GitHub. Vedi `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 

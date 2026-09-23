@@ -4,15 +4,19 @@ Ticket e specifiche vivono su **Linear**, workspace `mattia-personal`, team **`M
 progetto **"POC - Prenotazione Sale"** (`P-MAT-1`). Tutte le operazioni passano dal server
 MCP `linear-server`. Codice, CI e pull request restano su **GitHub**.
 
-## Specifiche: Documents, non ticket
+## Specifiche: file nel repo, non Documents
 
-Una specifica non è un'unità di lavoro: non ha stato, non si chiude, resta il riferimento
-mentre i ticket nascono e muoiono.
+Le specifiche vivono in **`spec/`**, committate, revisionate come codice. Idem `intent/` e
+`docs/adr/`. Motivo: il processo si regge sull'artefatto versionato — diff, revisione,
+storia. Un documento che vive solo su Linear non ne ha nessuna delle tre.
 
-- **Creare**: `save_document` con `title`, `content` (markdown) e `project: "P-MAT-1"`.
-- **Aggiornare**: `save_document` con `id` e `patch` (o `content` per riscriverla).
-- **Leggere / elencare**: `get_document` / `list_documents` filtrati sul progetto.
-- I ticket la citano **per link** (`links: [{url, title}]` su `save_issue`), mai copiandola.
+Una specifica **non è un'unità di lavoro**: non ha stato e non si chiude, quindi non è un
+ticket. Ma è un file, non una pagina di Linear.
+
+- I ticket la citano **per link al file** (`links: [{url, title}]` su `save_issue`),
+  puntando al percorso su GitHub.
+- Non creare Documents di Linear per le specifiche. Se un giorno servisse visibilità a chi
+  non apre il repo, un Document può **linkare** la specifica, mai copiarla.
 
 ## Ticket
 

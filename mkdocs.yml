@@ -20,10 +20,12 @@ theme:
 
 nav:
   - Home: index.md
+  - Come si integrano: come-si-integrano.md
   - Fasi:
       - 1 · Ambiente: fasi/01-ambiente.md
       - 2 · Repo e seed: fasi/02-repo-e-seed.md
       - 3 · Il tracker: fasi/03-tracker.md
+  - Risorse: risorse.md
 
 markdown_extensions:
   - admonition
