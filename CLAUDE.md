@@ -25,3 +25,17 @@ un processo**. Il valore sta nel processo e nella sua documentazione, non nel pr
 - Messaggi di commit in **italiano**, brevi e descrittivi.
 - Push su `main` solo tramite pull request quando la CI sarà attiva.
 - Documentazione del processo in `docs/`, generata con MkDocs.
+
+## Agent skills
+
+### Issue tracker
+
+Ticket su Linear (team `MAT`, progetto "POC - Prenotazione Sale") tramite il server MCP `linear-server`; specifiche come Documents di Linear. Codice e PR su GitHub. Vedi `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Le cinque label predefinite, in un gruppo Linear `Triage` a selezione singola. Vedi `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: `CONTEXT.md` e `docs/adr/` alla radice. Vedi `docs/agents/domain.md`.

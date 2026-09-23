@@ -64,6 +64,27 @@ La configurazione effettiva avviene in una sessione aperta dentro questo reposit
 skill di setup esamina la cartella in cui gira, quindi eseguirla altrove configurerebbe il
 progetto sbagliato.
 
-## Stato
+## Esito della configurazione
 
-In corso. Questa pagina verrà completata con l'esito della configurazione.
+La skill di setup è stata eseguita dentro il repository. Ha prodotto tre file in
+`docs/agents/`, che le skill di engineering leggono, e una sezione `## Agent skills` in
+`CLAUDE.md`.
+
+- **`issue-tracker.md`**: scritto da zero, perché per Linear non esiste un modello. È la
+  descrizione del flusso in prosa che la skill chiede, tradotta in operazioni MCP concrete.
+- **`triage-labels.md`**: le cinque label predefinite, con i nomi che le skill si
+  aspettano, dentro il gruppo `Triage` a selezione singola, come proposto sopra.
+- **`domain.md`**: contesto unico, un solo `CONTEXT.md` e `docs/adr/` alla radice. Il
+  repo non ha la forma di un monorepo, quindi non c'era scelta da fare.
+
+Due decisioni sono emerse al checkpoint umano. Non erano nella proposta:
+
+1. **Le specifiche sono Documents di Linear, non ticket.** Una specifica non è un'unità di
+   lavoro: non ha stato, non si chiude, e resta il riferimento mentre i ticket nascono e
+   muoiono citandola per link. Il ticket padre con sotto-ticket resta invece lo strumento
+   per la mappa di `/wayfinder`, che è lavoro.
+2. **Lo stato iniziale dei ticket dice se si possono prendere.** Un ticket parte in `Todo`
+   se è prendibile subito, in `Backlog` se dipende da qualcosa non ancora fatto.
+
+La domanda sulla sovrapposizione fra label di triage e stati di Linear resta aperta: si
+misura sul campo.
