@@ -1,0 +1,23 @@
+[project]
+name = "poc-sale-riunioni"
+version = "0.1.0"
+description = "POC: prenotazione sale riunioni — banco di prova di processo"
+authors = [
+    { name = "Informatropico", email = "informatropico@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.14"
+
+# Nessuna dipendenza applicativa dichiarata di proposito: lo stack e' oggetto
+# del primo ADR, che si scrive dopo la spec. Vedi README.
+dependencies = []
+
+[tool.poetry]
+packages = [{ include = "sale_riunioni", from = "src" }]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

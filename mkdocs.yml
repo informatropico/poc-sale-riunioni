@@ -1,0 +1,38 @@
+site_name: POC — Prenotazione sale riunioni
+site_description: Come è stato costruito questo progetto, fase per fase
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Passa al tema scuro
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Passa al tema chiaro
+  features:
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Home: index.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search
